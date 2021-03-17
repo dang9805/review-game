@@ -1,0 +1,140 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#nav{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    background-color: #173F5F;  
+}
+
+#under_nav{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    /* height: 100%; */
+    flex-grow: 1;
+    background-color:  rgb(30, 38, 39);
+
+}
+
+#home{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+    height: 80px;
+    background-color: whitesmoke;
+    margin: 15px;
+}
+
+#AboutUs{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+    height: 80px;
+    background-color: whitesmoke;
+    margin: 15px;
+
+}
+
+.name{
+    font: 100px;
+    color: black;
+}
+
+#gameplay_vid{
+    align-self: flex-start;
+    box-sizing: border-box;
+    width:31%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+#review_text_box{
+    box-sizing: border-box;
+    width:69%;
+    height: 100%;
+    display:flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(37, 38, 39); 
+    border-right: grey solid 3px;
+    text-align: justify;
+    padding: 30px;
+}
+
+img{
+    border-radius: 25px;
+}
+
+.font{
+    color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 20px;
+}
+
+a:link, a:hover, a:active{
+    color: white;
+    text-decoration: none;
+}
+
+#gameplay_vid iframe{
+    width: fit-content;
+    margin: 25px 40px 0px 10px;
+    position: fixed;
+}
+
+#gameplay_vid #nextpage {
+    height: 120px;
+    width: 120px;
+    border-radius: 5px;
+    display: flex;
+    margin-top: 25px;
+    display: inline-block;
+    border: none;
+    transition: all 0.5s;
+    cursor: pointer;
+ }
+
+ #nextpage span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  #nextpage span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+ }
+  
+ #nextpage:hover span {
+    padding-right: 25px;
+  }
+  
+  #nextpage:hover span:after {
+    opacity: 1;
+    right: 0;
+}
