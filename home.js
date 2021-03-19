@@ -19,5 +19,5 @@ document.getElementById("AboutUs").addEventListener("click",()=>{
 })
 
 document.getElementById("home").addEventListener("click",()=>{
-    window.location.href = "home.html"
+    window.location.href = "index.html"
 })
