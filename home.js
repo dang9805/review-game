@@ -1,17 +1,19 @@
+// ---------------------------changetab------------------------
+
 document.getElementById("minecraft").addEventListener("click",()=>{
-    window.location.href = "minecraft_dungeon.html"
+    window.location.href = "minecraft-dungeon1.html"
 })
 
 document.getElementById("cs").addEventListener("click",()=>{
-    window.location.href = "csgo.html"
+    window.location.href = "csgo1.html"
 })
 
 document.getElementById("lol").addEventListener("click",()=>{
-    window.location.href = "lol.html"
+    window.location.href = "lol1.html"
 })
 
 document.getElementById("genshin").addEventListener("click",()=>{
-    window.location.href = "genshin.html"
+    window.location.href = "genshin1.html"
 })
 
 document.getElementById("AboutUs").addEventListener("click",()=>{
@@ -20,4 +22,37 @@ document.getElementById("AboutUs").addEventListener("click",()=>{
 
 document.getElementById("home").addEventListener("click",()=>{
     window.location.href = "index.html"
+})
+
+// --------------------darkmode--------------------------------
+
+const chk = document.getElementById('chk');
+
+chk.addEventListener('change', () => {
+	document.getElementById("nav").classList.toggle('dark');
+});
+
+chk.addEventListener('change', () => {
+	document.getElementById("under_nav").classList.toggle('dark');
+});
+
+chk.addEventListener('change', () => {
+	document.getElementById("footer").classList.toggle('dark');
+});
+
+chk.addEventListener('change', () => {
+	document.getElementById("our_info").classList.toggle('dark');
+});
+
+chk.addEventListener('change', () => {
+	document.getElementById("review-bar").classList.toggle('dark');
+});
+
+// --------------------change-font-size--------------------------------
+
+document.getElementById("size-change").addEventListener("click",() => {
+    let fontSize = document.getElementById("size").value
+    document.body.style.fontSize = 20 + "px"
+    let Text = document.body
+    Text.style.fontSize = fontSize.toString() + "px"
 })
