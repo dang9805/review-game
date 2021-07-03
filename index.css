@@ -1,10 +1,12 @@
 html, body{
     display: flex;
     flex-flow: column;
-    height: 100%;
     width: 100%;
+    height: 100%;
     margin: 0px;
     padding: 0px;
+    font-size: 20px;
+
 }
 
 /* -----------------------------------------------nav----------------------------------------- */
@@ -34,16 +36,17 @@ html, body{
 }
 
 #AboutUs{
-    width: 150px;
+    width: auto;
+    /* width: 20%; */
     height: 50px;
-    margin: 15px;
-    text-align: center;
-    box-sizing: border-box;
-    border: 2px solid black;
-    border-radius: 8px;
-    margin-right: 70px;
-    font-size: 18px;
-}
+    margin: 0 70px;
+    /* border: 2px solid black;
+    border-radius: 8px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+ }
 
 #search-bar{
     width: 400px;
@@ -59,14 +62,44 @@ html, body{
 #more-content{
     width: 100px;
     height: 50px;
-    background-color: red;
     display: flex;
     align-items: center;
     justify-content: center;
     display: inline-block;
+ }
+
+ #more-content .button{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
 }
 
-#dropdown-content {
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\2B87';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+#dropdown-content{
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -81,7 +114,7 @@ html, body{
 }
 
 #sign-in-button{
-    width: 100px;
+    width: auto;
     height: 50px;
     display: flex;
     align-items: center;
@@ -89,24 +122,31 @@ html, body{
  }
 
  #sign-in-button button{
-    width: 80%;
-    height: 30px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 80%;
+    height: 50px;
+    flex-grow: 1;
+    padding: 0 10px;
 }
 
-/* -----------darkmode------------------------------------------------ */
+/* -----------------darkmode------------------------------------------------ */
 
 #nav.dark{
 	background: #292C35;
+    color: #fff;
 }
 
 #under_nav.dark{
     background: #292C35;
     color: #fff;
-}
+ }
+
+ #under_nav.dark a{
+     color: #fff;
+ }
 
 #footer.dark{
     background: #292C35;
@@ -121,6 +161,16 @@ html, body{
 #review-bar.dark{
     background: #292C35;
     color: #fff;
+}
+
+#our_info.dark{
+    background: #292C35;
+    color: #fff;
+}
+
+#dropdown-content.dark{
+    background: #292C35;
+    box-shadow: 0px 8px 16px 0px #E6E6E6;
 }
 
 .label {
@@ -163,7 +213,12 @@ html, body{
  #change-font-size input{
      height: auto;
      width: 100px;
+     border-radius: 5px;
  }
+
+ #change-font-size button{
+     border-radius: 10px;
+}
 
 /* ----------------------------------------------aboutus------------------------------------------ */
 
@@ -173,27 +228,34 @@ html, body{
     justify-content: space-around;
     align-items: center;
     background-color: #20639B;
-    padding: 10px 0px;
     width: 100%;
     height: 100%;
     position: relative;
     border-bottom: 2px solid grey;
+    padding: 20px 0;
 }
 
 .info{
+    height: 90%;
+    width: 30%;
     display: flex;
     flex-flow: column;
+    justify-content: space-around;
     align-items: flex-start;
-    background-color: #164369;
-    margin: 0px 5px;
-    padding: 25px;
-    color: white;
-    font-size: 20px;
-    border-radius: 10px;
-    height: fit-content;
-
+    padding: 10px 0px 10px 30px;
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+    );
+    border-radius: 20px;
 }
 
+ .info img{
+     height: 100px;
+     width: 100px;
+     border-radius: 10px;
+ }
 /* ----------------------------------------------under_nav----------------------------------------- */
 
 #under_nav{
@@ -202,18 +264,18 @@ html, body{
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 100%;
     background-color: #20639B;
     border-bottom: 2px solid grey;
-    position: relative;
+    position:relative;
+    flex-grow: 1;
 }
 
 #game-content{
-    height: 95%;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-bottom: 2px solid grey;
 }
 
 .game{
@@ -222,7 +284,7 @@ html, body{
     justify-content: space-between;
     align-items: center;
     width: 25%;
-    height: 90%;
+    height: 300px;
     margin: 10px 30px;
     border-radius: 10px;
 }
@@ -233,27 +295,62 @@ html, body{
     text-align: center;
 }
 
-#more{
+#save-post-home-page{
+    width: 100%;
     position: relative;
-    height: fit-content;
-    width: fit-content;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5px;
-    color: black;
+    flex-flow: column;
+    border-bottom: 2px solid grey;
+ }
+
+ #save-post-home-page #save-post-home-page-title{
+    width: 100%;
+    height: auto;
+    padding: 0 20px 0 0;
+ } 
+
+#more-review-game{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+ }
+
+ #more-review-game a{
+     text-decoration:none;
+     color: #000;
+ }
+
+.posts{
+    width: 50%;
+    height: fit-content;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    margin-left: 20%;
+    padding: 10px;
+    border-bottom: 1px solid grey;
+ }
+
+ .posts img{
+     height: 125px;
+     width: 125px;
+     border-radius: 10px;
+     margin-right: 50px;
 }
 
 /* -----------------------------------------------------footer-------------------------------------------- */
 
 #footer{
     background-color: #99ccff;
-    width:100%;
+    /* background-color: #20639B; */
+    width: 100%;
+    height: fit-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-flow: row;
-    height: fit-content;
     position: relative;
     border-bottom: 2px solid grey;
 }
@@ -272,18 +369,18 @@ html, body{
     width: 100%;
     display: flex;
     flex-flow: row;
-    justify-content: flex-start;
-    margin: 10px;
-}
-
- #icons .icon{
-     height: 30px;
-     width: 30px;
-     border-radius: 25px;
-     margin: 0px 30px 0px 50px;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 10px;
  }
 
- #infos{
+ #icons .icon{
+     height: fit-content;
+     font-size: 25px;
+     color: #E6E6E6;
+ }
+
+#infos{
     height: fit-content;
     width: 100%;
     display: flex;
@@ -316,38 +413,35 @@ html, body{
     position: relative;
 }
 
-#list{
+/* #list{
     height:100%;
     width: 5%;
-    position: relative;
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
-    align-items: center;
- }
-
- #list button{
-     height: 50px;
-     width: 50px;
-}
+    align-items: flex-start;
+    position:static;
+    width: 5%;
+ } */
 
 #review-content{
     box-sizing: border-box;
-    width:70%;
+    width:65%;
     height: 100%;
     display:flex;
     flex-flow: column;
     justify-content: space-around;
     align-items: center;
-    border-left: grey solid 3px;
-    border-right: grey solid 3px;
+    /* border-left: grey solid 3px; */
+    /* border-right: grey solid 3px; */
     text-align: justify;
-    padding: 10px 30px;
-    font-size: 20px;
+    padding: 10px 20px;
+    text-align:start;
+    margin: 5%;
 }
 
 #advertise-content{
-    width: 25%;
+    width: 35%;
     height: 100%;
     position: relative;
     display: flex;
@@ -357,12 +451,115 @@ html, body{
 }
 
 #gameplay-vid{
-     width: 275px;
+     width: 250px;
      height: 175px;
      margin: 10px 5px;
  }
 
  #gameplay-vid iframe{
      height: 200px;
-     width: 275px;
+     /* width: 275px; */
+     width: 100%;
+}
+
+#save-post{
+    width: 80%;
+    height: 200px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-top: 1px solid grey;
+ }
+
+ #yes-or-no{
+     width: 200px;
+     height: auto;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     flex-flow:row;
+     padding: 20px 10px;
+ }
+
+ #yes-or-no .btn-yes-no{
+     height: 90%;
+     width: auto;
+     border-radius: 10px;
+     padding: 0 10px;
+     /* flex-grow:1; */
+ }
+
+/* -------------------------------------------sign-in-page---------------------------- */
+
+#main-content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+#main-box{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column;
+    padding: 10px 0;
+    box-shadow: 0px 8px 8px 8px rgba(0,0,0,0.2);
+}
+
+#grey-bar{
+    width: 175px;
+    height: 5px;
+    background-color: grey;
+    border-radius: 25px;
+}
+
+#sign-in-box{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: column;
+    /* padding: 0 0 0 50px; */
+ }
+
+ #sign-in-box input{
+     border-radius: 5px;
+ }
+
+ #sign-in-box button{
+    border-radius: 5px;
+ }
+
+ #info-sign-in-box{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #info-sign-in-box form{
+    margin: 20px 0;
+  }
+
+#title{
+    width: 100%;
+    padding: 0 20px;
+}
+
+.info-form input{
+    border-radius: 5px;
+ }
+
+ .info-form select{
+    border-radius: 5px;
+    width: 80px;
 }

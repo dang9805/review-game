@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <link rel="stylesheet" href="index.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
     <nav id="nav">
         <div id="home" style="background-image: url('img/tem_logo.png'); background-size: 110% 100%;">
             <!-- logo pls -->
         </div>
+
         <form id="search-bar">
             <input type="text" placeholder="Search">
         </form>
 
         <div id="more-content">
-            <p>more</p>
+            <button class="button"><span>thêm</span></button>
+
             <div id="dropdown-content">
                 <div>
                     <p>light/dark mode</p>
@@ -26,44 +28,50 @@
                         <div class="ball"></div>
                     </label>
                 </div>
+
+                <div id="change-font-size">
+                    <p>chuyển đổi cỡ chữ</p>
+                    <input type="number" id="size">
+                    <button id="size-change">ấn</button>
+                </div>
             </div>
         </div>
 
-        <button id="AboutUs">About Us</button>
+        <div id="sign-in-button">
+            <button id="sign-in">sign-in</button>
+        </div>
+
+        <button id="AboutUs">Về chúng tôi</button>
     </nav>
 
     <div id="our_info">
-        <div class="info">
+        <div class="info" data-tilt>
             <img src="img/ripdangpart2.jpg" alt="">
-            <p class="font-about">Nguyễn Công Đăng</p>
-            <p class="font-about">Tuổi:15</p>
-            <p class="font-about">Facebook: Nguyễn Công Đăng</p>
-            <p class="font-about">Email: congdang981997@gmail.com</p>
+            <p class="font-aboutus">Nguyễn Công Đăng</p>
+            <p class="font-aboutus">Tuổi:15</p>
+            <p class="font-aboutus">Facebook: Nguyễn Công Đăng</p>
+            <p class="font-aboutus">Email: congdang981997@gmail.com</p>
         </div>
 
-        <div class="info">
+        <div class="info" data-tilt>
             <img src="img/ggminh.png" alt="">
-            <p class="font-about">Nguyễn Hoàng Minh</p>
-            <p class="font-about">Tuổi:14</p>
-            <p class="font-about">Facebook: Nguyễn Hoàng Minh</p>
-            <p class="font-about">Email: minhmancity77@gmail.com</p>
+            <p class="font-aboutus">Nguyễn Hoàng Minh</p>
+            <p class="font-aboutus">Tuổi:14</p>
+            <p class="font-aboutus">Facebook: Nguyễn Hoàng Minh</p>
+            <p class="font-aboutus">Email: minhmancity77@gmail.com</p>
 
         </div>
 
-        <div class="info">
+        <div class="info" data-tilt>
             <img src="img/bachimg.jpg" alt="">
-            <p class="font-about">Lê Việt Bách</p>
-            <p class="font-about">Tuổi: 13</p>
-            <p class="font-about">Facebook: Lê Việt Bách</p>
-            <p class="font-about">Email: vietbach0407@gmail.com</p>
+            <p class="font-aboutus">Lê Việt Bách</p>
+            <p class="font-aboutus">Tuổi: 13</p>
+            <p class="font-aboutus">Facebook: Lê Việt Bách</p>
+            <p class="font-aboutus">Email: vietbach0407@gmail.com</p>
         </div>
     </div>
 
-    <div id="footer">
-        
-        <!-- <b>
-            <p style="position:absolute;top:1px;left:30px;border-right: black 1px solid;padding-right: 20px;">EN</p>
-        </b> -->
+    <!-- <div id="footer">
         <div id="left-footer">
             <div id="icons">
                 <a= href="">
@@ -94,7 +102,9 @@
         <div id="right-footer">
             <a href="#top">Back to the top</a>
         </div>
-    </div>
+    </div> -->
+
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
 </body>
-<script src="home.js"></script>
+<script src="review.js"></script>
 </html>

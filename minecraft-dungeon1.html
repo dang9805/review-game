@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>counter strike: global offensive</title>
+    <title>Minecraft Dungeon</title>
     <link rel="stylesheet" href="index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
     <nav id="nav">
         <div id="home" style="background-image: url('img/tem_logo.png'); background-size: 110% 100%;">
-            <!-- logo pls -->
         </div>
 
         <form id="search-bar">
@@ -20,7 +20,8 @@
         </form>
 
         <div id="more-content">
-            <p>thêm</p>
+            <button class="button"><span>thêm</span></button>
+
             <div id="dropdown-content">
                 <div>
                     <p>light/dark mode</p>
@@ -33,7 +34,7 @@
                 <div id="change-font-size">
                     <p>chuyển đổi cỡ chữ</p>
                     <input type="number" id="size">
-                    <button id="size-change">press</button>
+                    <button id="size-change">ấn</button>
                 </div>
             </div>
         </div>
@@ -46,14 +47,15 @@
     </nav>
 
     <div id="review-bar">
-        <div id="list">
+        <!-- <div id="list">
             <button>
-                <!-- list icon -->
+                <i class="fa fa-bars"></i>
+                
             </button>
-        </div>
+        </div> -->
 
         <div id="review-content">
-            <h1 style="color: black">Review game: Minecraft Dungeons</h1>
+            <h1>Review game: Minecraft Dungeons</h1>
             <p class="font">
                 Khi tôi lần đầu tiên nhìn thấy lối chơi Minecraft Dungeons, tôi đã kiểu "Đó là Diablo, nhưng lại là Minecraft?" Bây giờ tôi đã chơi nó, tôi thích, vâng: Minecraft Dungeons về cơ bản là Diablo với vẻ ngoài là Minecraft. Chắc chắn, nó không khai thác cùng cách chơi như Diablo và cẩn thận với công thức thay vì tự đi theo con đường riêng với những ý tưởng táo bạo lấy cảm hứng từ Minecraft, nhưng nó có các trận chiến thú vị và chiến lợi phẩm cần thiết và có thể truy cập cho bất kỳ ai.
             </p>
@@ -93,7 +95,7 @@
             <p class="font">
                 Nói về sự dễ dàng, khi lần đầu tiên tôi bắt đầu chơi Minecraft Dungeons, tôi nghĩ rằng độ khó bình thường nghiêng một chút về phía dễ. Tôi đã có thể hack và chém theo cách của mình một cách không suy nghĩ trong vài cấp độ đầu tiên ... nhưng khi tôi lên cấp, khó khăn cũng tăng theo. Nửa sau của chiến dịch là một thử thách nhiều hơn, và yêu cầu tôi phải tiếp cận trận chiến một cách chu đáo và quản lý cẩn thận việc sử dụng thuốc và hiện vật của mình. Cuối cùng, độ khó chỉ phù hợp với lần chơi đầu tiên. Trên thực tế, đối với trùm cuối, tôi có thể nói rằng nó khó hơn một chút so với tôi dự đoán.
             </p>
-            <div style = "margin-left: 100px; margin-right: 400px; color: black; padding:20px; background-color: #3CAEA3;">
+            <div style = "margin-left: 100px; margin-right: 400px; padding:20px; background-color: #3CAEA3;">
                 <p style = "margin-left: 0px;" >Tùy chọn hợp tác</p>
                 <p style = "margin-right: 0px; margin-left: 0px;">Như trường hợp của tất cả các trình thu thập thông tin dựa trên loot về cơ bản, Minecraft Dungeons thú vị hơn nhiều khi chơi với bạn bè. Nó hỗ trợ tối đa bốn người chơi trong nhiều người chơi trực tuyến cũng như co-op đi văng, điều này thật đáng yêu. Chơi với con trai tôi trên PC của chúng tôi, tôi không tìm thấy gì đột phá (hiểu chưa?) Về tính năng nhiều người chơi, đặc biệt là do thiếu các lớp người chơi để kết hợp các khả năng giữa chúng, nhưng nó hoạt động rất tốt.</p>
             </div>
@@ -118,11 +120,11 @@
             <p class="font">
                 Điều khiến tôi ngạc nhiên về hệ thống chiến lợi phẩm là nó thiếu hệ thống chế tạo, điều mà tôi thường không yêu cầu ngoại trừ việc đây là phần phụ của một trò chơi được xây dựng hoàn toàn xung quanh khái niệm đó và thậm chí vẫn có từ “thủ công” trong tên . Có một bàn chế tạo trong nhà trong trại căn cứ của bạn và khi tôi nhìn thấy nó lần đầu tiên, tôi bắt đầu nhấp vào nó một cách điên cuồng, mong đợi một cuộc đối thoại chế tạo bật lên. Cũng không có hoạt động khai thác hoặc phá vỡ mọi thứ lớn hơn điển hình trong Minecraft Dungeons, vì vậy các tài liệu tham khảo nguồn của nó phần lớn là sâu sắc. Điều đó không có nghĩa là thiết lập một trình thu thập thông tin trong ngục tối trong thế giới Minecraft là một thất bại; cách xa nó. Nó quyến rũ như địa ngục. Nhưng nó chắc chắn giảm thiểu "Minecraft" và tối đa hóa "Dungeon".
             </p>
-            <h4 style="margin-left: 10px; color: black;">Nhận định</h4>
-            <p style = "font-size: 20px;margin-left: 10px; color: black;">
+            <h4 style="margin-left: 10px;">Nhận định</h4>
+            <p style = "font-size: 20px;margin-left: 10px;">
                 Minecraft Dungeons là một trình thu thập thông tin trong ngục tối đẹp mắt và vui nhộn với một bộ hệ thống đơn giản nhưng đã được thử nghiệm và đúng. Tuy nhiên, nó chơi nó cực kỳ an toàn mà không mang lại bất kỳ điều gì khai thác hoặc chế tạo các vòng quay cho thể loại này để đi kèm với giao diện đặc trưng của Minecraft. Tuy nhiên, nó thật quyến rũ và thật thú vị, thật khó để có thể mắc lỗi vì nó đã đi đúng con đường an toàn. Với hàng tấn chiến lợi phẩm, các khu vực bí mật cần khám phá và các cấp độ khó mở khóa ngày càng tích cực hơn, Minecraft Dungeons có một lượng lớn khả năng chơi lại ngoài chế độ câu chuyện tương đối ngắn từ sáu đến tám giờ của nó. Nhưng dù sao thì ai chơi Minecraft để xem cốt truyện?
             </p>
-            <div style="color: black;">
+            <div>
                 Source: <a href="https://www.ign.com/articles/minecraft-dungeons-review">ign.com</a>
             </div>
         </div>
@@ -131,9 +133,17 @@
             <div id="gameplay-vid">
                 <iframe src="http://widgets.ign.com/video/embed/content.html?url=https://www.ign.com/videos/2020/05/27/minecraft-dungeons-review" scrolling="no" frameborder="0" allowfullscreen></iframe>
             </div>
+            
+            <div id="save-post">
+                <p>Bạn có muốn lưu bài viết không?</p>
+                <div id="yes-or-no">
+                    <button class="btn-yes-no">Có</button>
+                    <button class="btn-yes-no">Không</button>
+                </div>
+            </div>
         </div>
     </div>
 
 </body>
-<script src="home.js"></script>
+<script src="review.js"></script>
 </html>

@@ -6,6 +6,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
     <nav id="nav">
@@ -18,26 +19,27 @@
         </form>
 
         <div id="more-content">
-            <p>thêm</p>
+            <button class="button"><span>thêm</span></button>
+
             <div id="dropdown-content">
                 <div>
-                    <p>light/dark mode</p>
+                    <p>chế độ tối</p>
                     <input type="checkbox" class="checkbox" id="chk" />
                     <label class="label" for="chk">
                         <div class="ball"></div>
                     </label>
                 </div>
 
-                <div id="change-font-size">
+                <!-- <div id="change-font-size">
                     <p>chuyển đổi cỡ chữ</p>
                     <input type="number" id="size">
-                    <button id="size-change">press</button>
-                </div>
+                    <button id="size-change">ấn</button>
+                </div> -->
             </div>
         </div>
 
         <div id="sign-in-button">
-            <button id="sign-in">sign-in</button>
+            <button id="sign-in">đăng nhập</button>
         </div>
 
         <button id="AboutUs">Về chúng tôi</button>
@@ -45,46 +47,70 @@
 
     <div id="under_nav">
         <div id="game-content">
-            <div id="minecraft" class="game" style="background-image: url('img/minecraft_dungeon1.jpg'); background-repeat:no-repeat; background-size: 100% 100%;">
-                <p class="game_name">Minecraft Dungeon</p>
-            </div>
-
             <div id="cs" class="game" style="background-image: url('img/csgo1.jpg'); background-repeat: no-repeat; background-size: 100% 100%;">
-                <p class="game_name">Counter-Strike: Global Offensive</p>   
+                <b class="game_name">Counter-Strike: Global Offensive</b>   
             </div>
 
             <div id="lol" class="game" style="background-image: url('img/lol.jfif'); background-repeat: no-repeat; background-size: 100% 100%;">
-                <p class="game_name">League of Legends</p>
+                <b class="game_name">League of Legends</b>
             </div>
 
             <div id="genshin" class="game" style="background-image: url('img/razor.jfif'); background-repeat: no-repeat; background-size: 100% 100%;">
-                <p class="game_name">Genshin Impact</p>
+                <b class="game_name">Genshin Impact</b>
+            </div>
+
+            <div id="minecraft" class="game" style="background-image: url('img/minecraft_dungeon1.jpg'); background-repeat:no-repeat; background-size: 100% 100%;">
+                <b class="game_name">Minecraft Dungeon</b>
             </div>
         </div>
 
-        <div id="more">
-            <a href="">more</a>
-        </div>
-    </div>
+        <div id="save-post-home-page">
+            <div id="save-post-home-page-title">
+                <h3>Bài viết đã lưu</h3>
+            </div>
 
+            <div id="save-post-home-page-content">
+                
+            </div>
+        </div>
+
+        <div id="more-review-game">
+            <div class="posts">
+                <img src="./img/demon-slayer-the-hinokami-chronicles.jpg" alt="">
+                <a href="demonslayer-game-release.html">Demon Slayer - Kimetsu no Yaiba - The Hinokami Chroniclesđược đã được thông báo sẽ phát hành ở các nước phương Tây</a>
+            </div>
+            <div class="posts">
+                <img src="./img/darksoul3.jpg" alt="">
+                <a href="dark-soul-3.html">dark souls 3 review</a>
+            </div>
+            <div class="posts">
+                <img src="./img/sekiro.jpg" alt="">
+                <a href="sekiro-review.html">Sekiro: Shadows Die Twice Review</a>
+            </div>
+        </div>        
+    </div>
 
     <div id="footer">
         <div id="left-footer">
             <div id="icons">
-                <a= href="">
-                    <img class="icon" src="https://woocommerce.com/wp-content/plugins/wccom-facebook-product-header/client/assets/images/facebook-icon.png" alt="">
-                </a=>
-
-                <a href="">
-                    <img class="icon" src="https://blog.addthiscdn.com/wp-content/uploads/2015/11/twitter.jpg" alt="">
+                <a href="" class="icon">
+                    <!-- <img class="icon" src="https://woocommerce.com/wp-content/plugins/wccom-facebook-product-header/client/assets/images/facebook-icon.png" alt=""> -->
+                    <i class="fab fa-facebook-square"></i>
                 </a>
 
-                <a href="">
-                    <img class="icon" src="https://banner2.cleanpng.com/20180514/txe/kisspng-youtube-logo-5afa04958ecbc5.7692802515263346135849.jpg" alt="">
+                <a href="" class="icon">
+                    <!-- <img class="icon" src="https://blog.addthiscdn.com/wp-content/uploads/2015/11/twitter.jpg" alt=""> -->
+                    <i class="fab fa-twitter-square"></i>
                 </a>
 
-                <a href="">
-                    <img class="icon" src="https://banner2.cleanpng.com/20180719/sjy/kisspng-instagram-computer-icons-logo-clip-art-well-5b50e0c8e01709.2507969715320270809179.jpg" alt="">
+                <a href="" class="icon">
+                    <!-- <img class="icon" src="https://banner2.cleanpng.com/20180514/txe/kisspng-youtube-logo-5afa04958ecbc5.7692802515263346135849.jpg" alt=""> -->
+                    <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="" class="icon">
+                    <!-- <img class="icon" src="https://banner2.cleanpng.com/20180719/sjy/kisspng-instagram-computer-icons-logo-clip-art-well-5b50e0c8e01709.2507969715320270809179.jpg" alt=""> -->
+                    <i class="fab fa-instagram"></i>
                 </a>
             </div>
 
