@@ -49,15 +49,17 @@ chk.addEventListener('change', () => {
 	document.getElementById("our_info").classList.toggle('dark');
 });
 
-chk.addEventListener('change', () => {
-	document.getElementById("review-bar").classList.toggle('dark');
-});
+// chk.addEventListener('change', () => {
+// 	document.getElementById("review-bar").classList.toggle('dark');
+// });
 
 chk.addEventListener('change', () => {
 	document.getElementById("dropdown-content").classList.toggle('dark');
 });
 
-
+chk.addEventListener('change', () => {
+	document.getElementById("saved-posts-name").classList.toggle('dark');
+});
 
 // --------------------change-font-size--------------------------------
 
@@ -73,15 +75,17 @@ chk.addEventListener('change', () => {
 let post_cover_img = {
     "Counter-Strike: Global Offensive Review": "./img/csgo1.jpg"
 }
-let postName = JSON.parse(localStorage.getItem("saved_post"))
 
-for (i = 0; i <= postName.length; i ++) {
+var postName = JSON.parse(localStorage.getItem("saved_post"))
+console.log(postName)
+
+for (i = 0; i < postName.length; i ++) {
     let posts = document.createElement("div")
     posts.innerHTML = `
-        <a style = "text-decoration:none; color: #000;">${postName[i].name}</a>
+    <ul>
+        <li><a href = "${postName[i].href}" id ="saved-posts-name">${postName[i].name}</a></li>
+    </ul>
     `
     document.getElementById("save-post-home-page-content").appendChild(posts)
 }
-console.log(postName)
 
-// document.getElementById("save-post-home-page-content").innnerHTML = document.getElementsByClassName("savePosts").innerHTML

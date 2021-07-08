@@ -40,6 +40,10 @@ chk.addEventListener('change', () => {
 	document.getElementById("dropdown-content").classList.toggle('dark');
 });
 
+chk.addEventListener('change', () => {
+	document.getElementById("save-post-review-name").classList.toggle('dark');
+});
+
 // --------------------change-font-size--------------------------------
 
 
@@ -55,27 +59,70 @@ document.getElementById("size-change").addEventListener("click",() => {
 // --------------------------------------save-posts-----------------------------------------
 
 document.getElementById("yes").addEventListener("click", ()=>{
-    let post_name = document.getElementsByTagName("h1")[0].textContent.value
+
+    let post_name = document.getElementsByTagName("h1")[0].textContent
     let post =
+    {
+        "name" : post_name,
+        "href" : window.location.href,
+    }
+
+    let data = localStorage.getItem("saved_post")
+
+    if (data == null) {
+        data = []
+        // {
+        //     "list" : [],
+        //     []
+        // }
+        data.push(post)
+        // data.list.push(post)
+        localStorage.setItem("saved_post", JSON.stringify(data))
+        console.log(data)
+    } 
+
+    else {
+        data = JSON.parse(localStorage.getItem("saved_post"))
+
+        // {
+        //     // "list" : 
+        //     [
+        //         JSON.parse(data)
+        //     ],
+        // }
+
+        let posts = 
         {
             "name" : post_name,
             "href" : window.location.href,
-        }    
-    let data = localStorage.getItem("saved_post")
-    localStorage.clear(data)
-    if (data == null){
-        data = 
-        {
-            list : [post],
         }
+        // data.list.push(posts)
+        data.push(posts)
+        localStorage.setItem("saved_post", JSON.stringify(data))
+        console.log(data)
     }
 
-    // data.list.push(post)
-    localStorage.setItem("saved_post", data)
-    console.log(data)
+
+
+    // console.log(data)
+    // console.log(datas)
+    // data.push(post)
+    // datas.push(post)
+    // localStorage.setItem("saved_post", JSON.stringify(data), JSON.stringify(datas))
 })
 
 document.getElementById("no").addEventListener("click",()=>{
     document.getElementById("save-post").style.display = "none"
 })
 
+var postName = JSON.parse(localStorage.getItem("saved_post"))
+
+for (i = 0; i < postName.length; i ++) {
+    let posts = document.createElement("div")
+    posts.innerHTML = `
+    <ul>
+        <li><a href = "${postName[i].href}" id="save-post-review-name">${postName[i].name}</a></li>
+    </ul>
+    `
+    document.getElementById("save-post-review-page-content").appendChild(posts)
+}
